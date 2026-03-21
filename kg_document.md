@@ -1,18 +1,6 @@
-# langchain-core
+# RAG_with_knowledge_graph(Neo4j) 文件
 
-contains simple, core abstractions that have emerged as a standard, as well as LangChain Expression Language as a way to compose these components together. This package is now at version 0.1 and all breaking changes will be accompanied by a minor version bump.
-
-# langchain-community
-
-contains all third party integrations. We will work with partners on splitting key integrations out into standalone packages over the next month.
-
-# langchain
-
-contains higher-level and use-case specific chains, agents, and retrieval algorithms that are at the core of your application's cognitive architecture. We are targeting a launch of a stable 0.1 release for langchain in early January.#
-
-# Neo4j
-
-Cypher 語法
+## Neo4j
 
 1. 專案簡介
    本專案結合 Retrieval-Augmented Generation (RAG) 與知識圖譜，利用 LangChain 生態系與 Neo4j 圖資料庫，實現結構化知識檢索與問答。資料來源以 Wikipedia 條目為例，經 LLM 處理後轉為圖譜，並支援自然語言查詢。
@@ -25,9 +13,9 @@ Cypher 語法
    langchain_openai / langchain_groq / langchain_huggingface：支援多種 LLM 與嵌入模型，分別對應 OpenAI、Groq、HuggingFace 等平台。
    2.2 Neo4j
    Neo4j 是一套高效能圖資料庫，適合儲存與查詢實體、關係等結構化知識。
-   在本專案中，Neo4j 用於儲存 LLM 轉換後的知識圖譜，並支援 Cypher 查詢語言進行複雜的關聯檢索。
+   在本專案中，Neo4j 用於儲存 LLM 轉換後的知識圖譜，支援 Cypher 查詢語言進行複雜的關聯檢索。
 3. 系統架構與資料流程
-   資料取得與分割：利用 WikipediaLoader 取得條目，並用 TokenTextSplitter 切分為適合處理的段落。
+   練習資料取得與分割：利用 WikipediaLoader 取得條目，並用 TokenTextSplitter 切分為適合處理的段落。
    LLM 轉圖譜：透過 LLMGraphTransformer，將文本內容轉換為圖譜格式（nodes/edges）。
    圖譜寫入 Neo4j：以 Neo4jGraph 將圖譜資料寫入 Neo4j 資料庫。
    向量化與混合檢索：用 HuggingFaceEmbeddings 產生向量，Neo4jVector 支援向量與結構化混合查詢。
@@ -47,3 +35,8 @@ Cypher 語法
 5. LangChain 與 Neo4j 的整合重點
    LangChain 提供模組化、可組合的流程設計，讓 LLM、檢索、圖譜查詢等功能能無縫整合。
    Neo4j 作為知識圖譜的儲存與查詢核心，支援複雜的關聯檢索，並可與向量檢索混合運用，提升問答準確度與靈活性。
+
+## langchain family
+- langchain-core: contains simple, core abstractions that have emerged as a standard, as well as LangChain Expression Language as a way to compose these components together.
+- langchain-community: contains all third party integrations.
+- langchain: contains higher-level and use-case specific chains, agents, and retrieval algorithms that are at the core of the application's cognitive architecture.

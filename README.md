@@ -1,4 +1,5 @@
 *This repository is a demonstration of building RAG, using a Knowledge Graph(Neo4j) and vector database(ChromaDB), with a Large Language Model(Groq).*
+*kg_document and vector_document illustrate the program details*
 
 ## KG Database - Neo4j
 *For the program detail, Please refer to the kg_document*

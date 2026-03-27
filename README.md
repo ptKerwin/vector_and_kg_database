@@ -22,7 +22,7 @@ Automated Knowledge Graph Construction: Leverages an LLM to automatically extrac
 
 - Large Language Model (LLM): Groq (mixtral-8x7b-32768) - Handles entity extraction, graph transformation, and final answer generation.
 - Graph Database: Neo4j (AuraDB / Local)
-- Development Framework: LangChain (langchain-core, langchain-community, langchain-experimental, langchain-neo4j)
+- Development Framework: LangChain (langchain-core, langchain-neo4j)
 - Embeddings Model: HuggingFace (sentence-transformers/all-MiniLM-L6-v2)
 - Data Source: Wikipedia API
 - Visualization: yfiles_jupyter_graphs
